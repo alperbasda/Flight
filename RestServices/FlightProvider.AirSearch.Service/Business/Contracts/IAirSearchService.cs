@@ -1,5 +1,4 @@
-﻿using AirSearchWcfSerivce;
-using FlightProvider.AirSearch.Service.Models.Requests;
+﻿using FlightProvider.AirSearch.Service.Models.Requests;
 using FlightProvider.AirSearch.Service.Models.Responses;
 using FlightProvider.AirSearch.Service.Models.Responses.Poco;
 

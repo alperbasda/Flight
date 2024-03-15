@@ -1,5 +1,4 @@
-﻿using AirSearchWcfSerivce;
-using FlightProvider.AirSearch.Service.Exceptions;
+﻿using FlightProvider.AirSearch.Service.Exceptions;
 using FlightProvider.AirSearch.Service.Models.Requests;
 
 namespace FlightProvider.AirSearch.Service.Business.Rules;

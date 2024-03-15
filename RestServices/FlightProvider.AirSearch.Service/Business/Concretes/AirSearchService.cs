@@ -1,4 +1,4 @@
-﻿using AirSearchWcfSerivce;
+﻿using AirSearchWcfService;
 using AutoMapper;
 using FlightProvider.AirSearch.Service.Business.Contracts;
 using FlightProvider.AirSearch.Service.Business.Rules;

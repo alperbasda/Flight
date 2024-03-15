@@ -1,4 +1,5 @@
-﻿using AirSearchWcfSerivce;
+﻿using AirportWcfService;
+using AirSearchWcfService;
 using FlightProvider.AirSearch.Service.Business.Concretes;
 using FlightProvider.AirSearch.Service.Business.Contracts;
 using FlightProvider.AirSearch.Service.Business.Rules;
@@ -26,6 +27,8 @@ public static class AddAirSearchServiceRegistrationExtension
         services.AddScoped<AirServiceBusinessRules>();
         services.AddScoped<IAirSearchService, AirSearchService>();
         services.AddSingleton<AirSearchClient>();
+        services.AddScoped<IAirportSearchService, AirportSearchService>();
+        services.AddSingleton<AirportSearchClient>();
 
         return services;
     }

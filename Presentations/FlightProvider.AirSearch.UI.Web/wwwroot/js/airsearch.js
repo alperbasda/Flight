@@ -105,3 +105,9 @@ $('[name="[1].DepartureDate"]').change(function () {
     var newValue = $(this).val();
     $('[name="[0].DepartureDate"]').attr('max', newValue);
 });
+
+$('[data-dynamic-for]').select2().on('change', function () {
+    var selectedOption = $(this).val();
+    
+    $('[name="' + $(this).attr('data-dynamic-for') + '"]').val(selectedOption);
+});

@@ -1,4 +1,4 @@
-﻿using AirSearchWcfSerivce;
+﻿using AirSearchWcfService;
 using AutoMapper;
 using FlightProvider.AirSearch.Service.Models.Requests;
 using FlightProvider.AirSearch.Service.Models.Responses.Poco;

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AirSearchWcfSerivce
+namespace AirSearchWcfService
 {
     using System.Runtime.Serialization;
     
@@ -70,12 +70,12 @@ namespace AirSearchWcfSerivce
     public partial class SearchResult : object
     {
         
-        private System.Collections.ObjectModel.Collection<AirSearchWcfSerivce.FlightOption> FlightOptionsField;
+        private System.Collections.Generic.List<AirSearchWcfService.FlightOption> FlightOptionsField;
         
         private bool HasErrorField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.ObjectModel.Collection<AirSearchWcfSerivce.FlightOption> FlightOptions
+        public System.Collections.Generic.List<AirSearchWcfService.FlightOption> FlightOptions
         {
             get
             {
@@ -169,22 +169,22 @@ namespace AirSearchWcfSerivce
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AirSearchWcfSerivce.IAirSearch")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AirSearchWcfService.IAirSearch")]
     public interface IAirSearch
     {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAirSearch/AvailabilitySearch", ReplyAction="http://tempuri.org/IAirSearch/AvailabilitySearchResponse")]
-        System.Threading.Tasks.Task<AirSearchWcfSerivce.SearchResult> AvailabilitySearchAsync(AirSearchWcfSerivce.SearchRequest request);
+        System.Threading.Tasks.Task<AirSearchWcfService.SearchResult> AvailabilitySearchAsync(AirSearchWcfService.SearchRequest request);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    public interface IAirSearchChannel : AirSearchWcfSerivce.IAirSearch, System.ServiceModel.IClientChannel
+    public interface IAirSearchChannel : AirSearchWcfService.IAirSearch, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    public partial class AirSearchClient : System.ServiceModel.ClientBase<AirSearchWcfSerivce.IAirSearch>, AirSearchWcfSerivce.IAirSearch
+    public partial class AirSearchClient : System.ServiceModel.ClientBase<AirSearchWcfService.IAirSearch>, AirSearchWcfService.IAirSearch
     {
         
         /// <summary>
@@ -227,7 +227,7 @@ namespace AirSearchWcfSerivce
         {
         }
         
-        public System.Threading.Tasks.Task<AirSearchWcfSerivce.SearchResult> AvailabilitySearchAsync(AirSearchWcfSerivce.SearchRequest request)
+        public System.Threading.Tasks.Task<AirSearchWcfService.SearchResult> AvailabilitySearchAsync(AirSearchWcfService.SearchRequest request)
         {
             return base.Channel.AvailabilitySearchAsync(request);
         }

@@ -14,7 +14,9 @@ var app = builder.Build();
 app.UseServiceModel(bld =>
 {
     bld.AddService<AirSearch>();
+    bld.AddService<AirportSearch>();
     bld.AddServiceEndpoint<AirSearch, IAirSearch>(new BasicHttpBinding(BasicHttpSecurityMode.Transport), "/Service.svc");
+    bld.AddServiceEndpoint<AirportSearch, IAirportSearch>(new BasicHttpBinding(BasicHttpSecurityMode.Transport), "/Service2.svc");
     var mb = app.Services.GetRequiredService<ServiceMetadataBehavior>();
     mb.HttpsGetEnabled = true;
 });
