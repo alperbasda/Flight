@@ -1,0 +1,23 @@
+{
+  "ExtendedData": {
+    "inputs": [
+      "https://localhost:5001/Service.svc"
+    ],
+    "collectionTypes": [
+      "System.Collections.Generic.Dictionary`2",
+      "System.Collections.ObjectModel.Collection`1"
+    ],
+    "namespaceMappings": [
+      "*, AirSearchWcfSerivce"
+    ],
+    "references": [
+      "Microsoft.AspNetCore.OpenApi, {Microsoft.AspNetCore.OpenApi, 7.0.14}",
+      "Microsoft.OpenApi, {Microsoft.OpenApi, 1.4.3}",
+      "Swashbuckle.AspNetCore.Swagger, {Swashbuckle.AspNetCore.Swagger, 6.5.0}",
+      "Swashbuckle.AspNetCore.SwaggerGen, {Swashbuckle.AspNetCore.SwaggerGen, 6.5.0}",
+      "Swashbuckle.AspNetCore.SwaggerUI, {Swashbuckle.AspNetCore.SwaggerUI, 6.5.0}"
+    ],
+    "targetFramework": "net7.0",
+    "typeReuseMode": "All"
+  }
+}

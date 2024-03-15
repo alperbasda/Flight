@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Uçuş Bul";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Hoşgeldiniz</h1>
+    <p> Uçuş aramak için lütfen bilgileri girin.</p>
+</div>
+<hr />
+<form>
+    <div class="row">
+        <div class="col-6">
+            <div class="p-4" data-target="0">
+                <div class="form-group">
+                    <label for="hl">Gidiş Havalimanı</label>
+                    <input data-required="true" type="text" name="[0].Origin" class="form-control" id="hl" placeholder="Gidiş Havalimanınızı Yazın">
+                    <input type="hidden" name="[1].Origin">
+                </div>
+                <div class="form-group mt-3">
+                    <label for="d1">Gidiş Tarihi</label>
+                    <input type="datetime-local" data-required="true" name="[0].DepartureDate" min="@DateTime.Now.ToString("yyyy-MM-ddThh:mm")" class="form-control" id="d1" placeholder="Gidiş Tarihi Seçin">
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="p-4" data-target="1">
+                <div class="form-group">
+                    <label for="hl2">Dönüş Havalimanı</label>
+                    <input type="text" data-required="true" name="[0].Destination" class="form-control" id="hl2" placeholder="Dönüş Havalimanınızı Yazın">
+                    <input type="hidden" name="[1].Destination">
+                </div>
+                <div class="form-group mt-3">
+                    <label for="d2">Dönüş Tarihi</label>
+                    <input type="datetime-local" data-required="true" name="[1].DepartureDate" class="form-control" id="d2" placeholder="Dönüş Tarihi Seçin">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 mt-2">
+            <button id="search_btn" type="button" class="btn btn-secondary w-100"> Ara </button>
+        </div>
+    </div>
+</form>
+<hr />
+<div id="loader" style="display:none">Yükleniyor....</div>
+<div class="row" id="results">
+
+    <div class="col-6 text-center">
+        <h4>Gidiş Seferleri</h4>
+        <div data-group="0">
+        </div>
+    </div>
+
+    <div class="col-6 text-center">
+        <h4>Dönüş Seferleri</h4>
+        <div data-group="1">
+        </div>
+    </div>
+
+</div>
+<div class="row text-center" id="flightDetail">
+
+</div>
